@@ -1,0 +1,16 @@
+:root {
+  --background-color: #1e1e2e;
+  --title-color: #cdd6f4;
+  --text-color: #a6adc8;
+  --link-color: #89b4fa;
+  --accent-color: #f5e0dc;
+}
+
+body {
+  background: var(--background-color);
+  color: var(--text-color);
+  font-family: "iA Writer Mono", monospace;
+}
+a {
+  color: var(--link-color);
+}

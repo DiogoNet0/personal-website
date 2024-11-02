@@ -1,0 +1,15 @@
+{
+  "name": "personal-site",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Diogo Neto",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@fontsource/ia-writer-mono": "^5.1.0",
+    "normalize.css": "^8.0.1"
+  }
+}
