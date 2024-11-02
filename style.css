@@ -1,16 +1,99 @@
 :root {
   --background-color: #1e1e2e;
+  --header-color: #11111b;
   --title-color: #cdd6f4;
   --text-color: #a6adc8;
   --link-color: #89b4fa;
-  --accent-color: #f5e0dc;
+  --accent-color: #f2cdcd;
+}
+
+html,
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 body {
   background: var(--background-color);
   color: var(--text-color);
   font-family: "iA Writer Mono", monospace;
+  display: flex;
+  flex-flow: column nowrap;
 }
+
 a {
   color: var(--link-color);
+  text-decoration: none;
+}
+
+.fa-brands {
+  color: var(--title-color);
+  font-size: 2rem;
+  padding-bottom: 1rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.fa-brands:hover {
+  transform: rotate(360deg) scale(1.2);
+}
+nav {
+  padding: 0 1rem;
+  background: var(--header-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul {
+  border: 1px red solid;
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main p {
+  font-size: 2.3rem;
+  font-weight: 700;
+}
+
+button {
+  color: var(--title-color);
+  text-decoration: none;
+  font-size: 25px;
+  border: none;
+  background: none;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+}
+
+button::before {
+  margin-left: auto;
+}
+
+button::after,
+button::before {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: var(--accent-color);
+  display: block;
+  transition: 0.5s;
+}
+
+button:hover::after,
+button:hover::before {
+  width: 100%;
+}
+
+footer {
+  text-align: center;
 }
