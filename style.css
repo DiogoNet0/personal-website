@@ -27,7 +27,12 @@ a {
   text-decoration: none;
 }
 
+.fa-heart {
+  color: var(--accent-color);
+}
+
 .fa-brands {
+  /* border: 1px green solid; */
   color: var(--title-color);
   font-size: 2rem;
   padding-bottom: 1rem;
@@ -46,9 +51,9 @@ nav {
 }
 
 ul {
-  border: 1px red solid;
+  /* border: 1px red solid; */
   display: flex;
-  justify-content: space-between;
+  gap: 1rem;
   list-style-type: none;
 }
 
@@ -61,12 +66,26 @@ main {
 }
 
 main p {
+  /* border: 1px red solid; */
+  margin: 0 0 1rem 0;
   font-size: 2.3rem;
   font-weight: 700;
 }
 
+.terminal--tilde {
+  color: var(--text-color);
+}
+
+.terminal--cursor {
+  color: var(--accent-color);
+}
+
+.main__terminal--name {
+  color: var(--link-color);
+}
+
 button {
-  color: var(--title-color);
+  color: var(--link-color);
   text-decoration: none;
   font-size: 25px;
   border: none;
@@ -96,4 +115,57 @@ button:hover::before {
 
 footer {
   text-align: center;
+}
+
+.output {
+  width: 30ch;
+  opacity: 0;
+  animation:
+    fade 0s 2.5s forwards,
+    typing 2s steps(25) 2.5s;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.typeme {
+  width: 30ch;
+  animation:
+    typing 2s steps(25),
+    blink 0.5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 10px solid #f2d5cf;
+}
+
+/* animation */
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 30ch;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* dynamic resizing */
+@media (min-width: 600px) {
+  body {
+    font-size: 1.25rem;
+  }
 }
